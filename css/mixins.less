@@ -1,0 +1,26 @@
+.size(@width, @height) {
+    width  : @width;
+    height : @height;
+}
+
+.square(@size: 100%) {
+    .size(@size, @size);
+}
+
+.position(@top, @right, @bottom, @left) {
+    top    : @top;
+    right  : @right;
+    bottom : @bottom;
+    left   : @left;
+}
+
+.position(@top, @right-left, @bottom) {
+    top    : @top;
+    right  : @right-left;
+    bottom : @bottom;
+    left   : @right-left;
+}
+
+.equal(@value) {
+    .position(@value, @value, @value, @value);
+}
